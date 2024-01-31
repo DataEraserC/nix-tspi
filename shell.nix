@@ -8,6 +8,7 @@ forAllSystems (
     pkgs = nixpkgs.legacyPackages.${system};
   in rec {
     default = pkgs.mkShell {
+      inputsFrom = with pkgs; [stdenv ncurses];
       packages =
         (with pkgs; [
           # build-essential
@@ -106,6 +107,7 @@ forAllSystems (
 
           # ncurses-dev
           ncurses.dev
+          ncurses
 
           # python-pyelftools
           python311Packages.pyelftools

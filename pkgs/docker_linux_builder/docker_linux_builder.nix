@@ -101,6 +101,7 @@ pkgs.dockerTools.buildLayeredImage {
 
       # ncurses-dev
       ncurses.dev
+      ncurses
 
       # python-pyelftools
       python311Packages.pyelftools
