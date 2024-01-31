@@ -16,6 +16,7 @@
 
   example-package = pkgs.callPackage ./pkgs/example-package { };
   docker_linux_builder = pkgs.callPackage ./pkgs/docker_linux_builder { };
+  fhs = pkgs.callPackage ./pkgs/fhs { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
