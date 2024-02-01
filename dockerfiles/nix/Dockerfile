@@ -7,5 +7,4 @@ RUN echo "trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16Z
 RUN echo "substituters =  https://mirror.sjtu.edu.cn/nix-channels/store https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org/" >> /etc/nix/nix.conf
 RUN echo "experimental-features = nix-command flakes" >> /etc/nix/nix.conf
 
-RUN nix shell nixpkgs#git --impure --command "git clone --recurse-submodules --depth=1 https://gitee.com/MayuriNFC/nix-tspi.git"
-RUN cd nix-tspi && NIXPKGS_ALLOW_INSECURE=1 nix build .#docker_linux_builder
+RUN NIXPKGS_ALLOW_INSECURE=1 nix build github:DataEraserC/nix-tspi#docker_linux_builder --impure
