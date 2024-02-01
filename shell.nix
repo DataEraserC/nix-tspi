@@ -11,6 +11,9 @@ forAllSystems (
       inputsFrom = with pkgs; [stdenv ncurses];
       packages =
         (with pkgs; [
+          # whiptail
+          newt
+
           # build-essential
           gcc
 

@@ -5,6 +5,9 @@ pkgs.dockerTools.buildLayeredImage {
   tag = "latest"; # provide a tag
   contents =
     (with pkgs; [
+      # whiptail
+      newt
+
       # build-essential
       gcc
 
