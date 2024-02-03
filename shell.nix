@@ -15,7 +15,7 @@ forAllSystems (
           newt
 
           # build-essential
-          gcc
+          gcc_7
 
           # crossbuild-essential-arm64
 
