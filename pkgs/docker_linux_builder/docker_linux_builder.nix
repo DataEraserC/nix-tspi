@@ -9,7 +9,7 @@ pkgs.dockerTools.buildLayeredImage {
       newt
 
       # build-essential
-      gcc_7
+      gcc7
 
       # crossbuild-essential-arm64
 
